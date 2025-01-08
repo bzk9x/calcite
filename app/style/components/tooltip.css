@@ -1,0 +1,83 @@
+.tooltip {
+    position: absolute;
+    background-color: #3c3835a4;
+    padding: 4px 8px;
+    border-radius: 4px;
+    backdrop-filter: blur(25px);
+    z-index: 1000;
+    pointer-events: none;
+    font-size: 12px;
+    border: 1px solid #6d6357;
+    color: #d3c3aa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.06);
+    width: fit-content;
+}
+
+.tip-minimize {
+    opacity: 0;
+    filter: blur(5px);
+    margin: 0 16px 0 0;
+    top: 100%;
+    left: 90.7%;
+    transition: 0.3s ease;
+}
+
+.tip-minimize::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #3c3835 transparent;
+}
+
+.tip-maximize {
+    opacity: 0;
+    filter: blur(5px);
+    margin: 0 16px 0 0;
+    top: 100%;
+    left: 87%;
+    transition: 0.3s ease;
+    width: 100px;
+}
+
+.tip-maximize::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 75.3%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #3c3835 transparent;
+}
+
+.tip-close {
+    opacity: 0;
+    filter: blur(0px);
+    margin: 0 16px 0 0;
+    top: 100%;
+    left: 91%;
+    transition: 0.3s ease;
+    width: 60px;
+}
+
+.tip-close::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 80%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #3c3835 transparent;
+}
+
+.tooltip.tip-visible {
+    opacity: 1;
+    filter: blur(0);
+    transition: 0.3s ease;
+}

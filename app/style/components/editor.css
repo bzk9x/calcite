@@ -1,0 +1,13 @@
+.editor {
+    flex: 1;
+    padding: 16px 16px 16px 0;
+}
+
+.edit-area {
+    width: 100%;
+    height: 100%;
+    background-color: #1c2021;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.06);
+}

@@ -1,0 +1,41 @@
+.app-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3),
+                0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    height: 90vh;
+    padding: 16px;
+    border-right: 2px solid #303030;
+    z-index: 0;
+}
+
+.create-file {
+    width: 38px;
+    height: 38px;
+    border: 2px dashed #ffffff;
+    margin: 32px 0 0 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s ease;
+}
+
+.create-file:active {
+    filter: blur(2px);
+}
+
+.create-file:hover {
+    opacity: 1;
+}
+
+.create-file img {
+    width: 20px;
+    height: 20px;
+}
+

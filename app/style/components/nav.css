@@ -1,0 +1,119 @@
+nav {
+    background-color: #1c20219d;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(25px);
+    height: 5vh;
+    z-index: 99;
+}
+
+.circle {
+    width: 8px;
+    height: 8px;
+    border: 2px solid #ffffff;
+    margin: 0 0 0 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.circle:hover {
+    border-radius: 2px;
+    transform: rotate(45deg);
+}
+
+.circle:active {
+    filter: blur(2px);
+}
+
+nav span {
+    margin: 6px 0 6px 16px;
+}
+
+.nav-glow {
+    width: 50px;
+    height: 25px;
+    position: absolute;
+    background-color: #d3859b;
+    z-index: 0;
+}
+
+.drag-area {
+    flex: 1;
+    app-region: drag;
+}
+
+.window-control {
+    display: flex;
+    gap: 8px;
+}
+
+.window-control-btn {
+    width: 12px;
+    height: 12px;
+    background-color: #3c3835;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.close {
+    margin: 0 16px 0 0;
+    background-color: #d3859b;
+}
+
+.window-control-btn:hover {
+    border-radius: 2px;
+    transform: rotate(45deg);
+}
+
+.window-control-btn:active {
+    filter: blur(2px);
+}
+
+.minimize:hover .tip-minimize {
+    opacity: 0;
+}
+
+.circle-menu {
+    position: absolute;
+    background-color: #3c3835;
+    font-size: 0.8em;
+    padding: 8px;
+    left: 16px;
+    top: 6vh;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    display: none;
+    transition: 0.3s ease;
+    z-index: 99;
+}
+
+.circle-menu img {
+    width: 10px;
+    height: 10px;
+}
+
+.circle-menu-item {
+    border-radius: 4px;
+    padding: 0 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+} 
+
+.circle-menu-item:hover {
+    background-color: #6e6458;
+}
+
+.circle-menu-item:active {
+    filter: blur(2px);
+}
+
+.circle-menu-visible {
+    display: block;
+    transition: 0.3s ease;
+}

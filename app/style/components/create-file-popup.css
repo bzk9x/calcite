@@ -1,0 +1,169 @@
+.create-file-popup {
+    position: absolute;
+    background-color: #282828;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3),
+                0 1px 3px rgba(0, 0, 0, 0.1);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    opacity: 0;
+    filter: blur(10px);
+}
+
+.create-file-popup-item {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.create-file-popup-item label {
+    flex: 1;
+}
+
+.create-file-popup-item input {
+    background-color: #3c3835;
+    padding: 8px;
+    margin: 8px 0 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0);
+    transition: 0.3s ease;
+    color: #d1bb96;
+    font-weight: bold;
+    width: 350px;
+}
+
+.create-file-popup-item input:focus {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3),
+                0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 2px solid #6e6458;
+}
+
+.data-format-select {
+    background-color: #3c3835;
+    padding: 8px;
+    margin: 8px 0 0 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0);
+    transition: 0.3s ease;
+    color: #d1bb96;
+    font-weight: bold;
+    width: 350px;
+}
+
+.data-format-select:focus {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3),
+                0 1px 3px rgba(0, 0, 0, 0.1);
+    border: 2px solid #6e6458;
+}
+
+.create-file-popup-title {
+    background-color: #1c20219d;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+}
+
+.create-file-popup-title span {
+    flex: 1;
+}
+
+.create-file-edit {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+}
+
+.create-file-popup-buttons {
+    border-top: 2px solid #1c20219d;
+    padding: 6px 12px;
+    display: flex;
+    justify-content: right;
+    gap: 8px;
+    margin: 16px 0 0 0;
+    align-items: center;
+}
+
+.create-file-btn-ok {
+    width: 75px;
+    padding: 8px;
+    background-color: #d3859b;
+    border: none;
+    color: #282828;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3),
+                0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.create-file-btn-ok:hover {
+    background-color: #a26677;
+}
+
+.create-file-btn-ok:active {
+    filter: blur(2px);
+}
+
+.create-file-btn-cancel {
+    width: 75px;
+    padding: 8px;
+    background-color: #3c3835;
+    border: none;
+    color: #d4c1a3;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 2px solid #6d6357;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3),
+                0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.create-file-btn-cancel:hover {
+    background-color: #35312e;
+}
+
+.create-file-btn-cancel:active {
+    filter: blur(2px);
+}
+
+.create-file-popup-title img {
+    width: 15px;
+    height: 15px;
+    
+}
+
+.close-create-file-popup {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.close-create-file-popup:active {
+    filter: blur(2px);
+}
+
+.create-file-popup.visible {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.3s ease;
+    opacity: 1;
+    filter: blur(0);
+}
+
+.create-file-popup-error-message {
+    flex: 1;
+}

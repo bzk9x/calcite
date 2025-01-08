@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcite</title>
+
+  <link rel="stylesheet" href="../style/global.css">
+  <link rel="stylesheet" href="../style/components/tooltip.css">
+  <link rel="stylesheet" href="../style/components/nav.css">
+  <link rel="stylesheet" href="../style/components/sidebar.css">
+  <link rel="stylesheet" href="../style/components/files.css">
+  <link rel="stylesheet" href="../style/components/editor.css">
+  <link rel="stylesheet" href="../style/components/create-file-popup.css">
+  
+</head>
+<body id="body">
+  <div class="circle-menu" id="circle-menu">
+    <div class="circle-menu-item" id="altMinimize">
+      <img src="../assets/images/ui/minimize.png">
+      <span>Minimize</span>
+    </div>
+    <div class="circle-menu-item" id="altMaximize">
+      <img src="../assets/images/ui/maximize.png">
+      <span>Maximize</span>
+    </div>
+    <div class="circle-menu-item" id="altClose">
+      <img src="../assets/images/ui/close.png">
+      <span>Close</span>
+    </div>
+  </div>
+  <div class="nav-glow"></div>
+  <nav>
+    <div class="circle" id="circle"></div>
+    
+    <span>Calcite</span>
+    <div class="drag-area">ㅤ</div>
+    <div class="window-control">
+      <div>
+        <div class="window-control-btn minimize" id="minimize" title="Minimize"></div>
+        <div class="tooltip tip-minimize" id="tip-minimize">Minimize</div>
+      </div>
+      <div>
+        <div class="window-control-btn maximize" id="maximize" title="Toggle full window"></div>
+        <div class="tooltip tip-maximize" id="tip-maximize" >Toggle full window</div>
+      </div>
+      <div>
+        <div class="window-control-btn close" id="close" title="Exit calcite"></div>
+        <div class="tooltip tip-close" id="tip-close">Exit Calcite</div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="sidebar">
+      <img src="../assets/images/icon.ico" alt="icon" class="app-icon">
+      <div class="create-file" id="create-file-btn">
+        <img src="../assets/images/ui/plus.png">
+      </div>
+    </div>
+    <div class="files">
+      <div class="file-explorer-text">Files</div>
+      <input type="text" placeholder="Search" class="searchbar">
+    </div>
+    <div class="editor">
+      <div class="edit-area">
+
+      </div>
+    </div>
+    <div class="create-file-popup" id="create-file-popup">
+      <div class="create-file-popup-title">
+        <span>Create new file</span>
+        <div class="close-create-file-popup" id="close-create-file-popup">
+          <img src="../assets/images/ui/x.png" alt="">
+        </div>
+      </div>
+      <div class="create-file-edit">
+        <div class="create-file-popup-item">
+          <label for="file-name">File name:</label>
+          <input type="text" id="file-name">
+        </div>
+        <div class="create-file-popup-item">
+          <label for="file-name">Directory:</label>
+          <input type="text" value="Project" disabled>
+        </div>
+        <div class="create-file-popup-item">
+          <label for="file-name">Data format:</label>
+          <select id="" class="data-format-select">
+            <option value="CSV">CSV</option>
+            <option value="TSV">TSV</option>
+            <option value="XLS/XLSX">XLS/XLSX</option>
+            <option value="SQL">SQL</option>
+            <option value="MDB/ACCDB">MDB/ACCDB</option>
+            <option value="XML">XML</option>
+            <option value="HTML">HTML</option>
+            <option value="JSON">JSON</option>
+            <option value="JSON-LD">JSON-LD</option>
+            <option value="YAML">YAML</option>
+            <option value="Parquet">Parquet</option>
+            <option value="Avro">Avro</option>
+            <option value="Protobuf">Protobuf</option>
+            <option value="Feather">Feather</option>
+            <option value="GeoJSON">GeoJSON</option>
+            <option value="NDJSON">NDJSON</option>
+            <option value="HDF5">HDF5</option>
+            <option value="PSV">PSV</option>
+            <option value="Fixed-Width Text file">Fixed-Width Text file</option>
+          </select>
+        </div>
+      </div>
+      <div class="create-file-popup-buttons">
+        <span class="create-file-popup-error-message" id="create-file-popup-error-message"></span>
+        <button class="create-file-btn-ok" id="create-file-btn-ok">Ok</button>
+        <button class="create-file-btn-cancel" id="create-file-btn-cancel">Cancel</button>
+      </div>
+    </div>
+  </main>
+
+  <!--<script src="../js/tooltips.js"></script>-->
+  <script src="../js/window-control.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/sidebar.js"></script>
+  <script src="../js/create-file.js"></script>
+</body>
+</html>
