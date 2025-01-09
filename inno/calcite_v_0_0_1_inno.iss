@@ -3,8 +3,8 @@
 
 #define MyAppName "Calcite"
 #define MyAppVersion "0.0.1"
-#define MyAppPublisher "Bitts Cafe"
-#define MyAppURL "https://github.com/bzk9x/calcite"
+#define MyAppPublisher "Your Publisher Name"
+#define MyAppURL "https://your-url.com"
 #define MyAppExeName "Calcite.exe"
 
 [Setup]
@@ -19,22 +19,15 @@ AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
 AppUpdatesURL={#MyAppURL}
 DefaultDirName={autopf}\{#MyAppName}
-; "ArchitecturesAllowed=x64compatible" specifies that Setup cannot run
-; on anything but x64 and Windows 11 on Arm.
 ArchitecturesAllowed=x64compatible
-; "ArchitecturesInstallIn64BitMode=x64compatible" requests that the
-; install be done in "64-bit mode" on x64 or Windows 11 on Arm,
-; meaning it should use the native 64-bit Program Files directory and
-; the 64-bit view of the registry.
 ArchitecturesInstallIn64BitMode=x64compatible
 DisableProgramGroupPage=yes
-LicenseFile=C:\Users\Tiwa\Documents\calcite_v_0_0_1_licence.txt
-InfoBeforeFile=C:\Users\Tiwa\Documents\calcite_v_0_0_1_install_message.txt
-; Remove the following line to run in administrative install mode (install for all users.)
+LicenseFile=license.txt
+InfoBeforeFile=install_message.txt
 PrivilegesRequired=lowest
-OutputDir=C:\Users\Tiwa\Documents\work\electron\Calcite\builds\exes
+OutputDir=output\directory\path
 OutputBaseFilename=Calcite_nightly_v0.0.1
-SetupIconFile=C:\Users\Tiwa\Downloads\Calcite.ico
+SetupIconFile=icon.ico
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern
@@ -46,9 +39,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\Tiwa\Documents\work\electron\Calcite\builds\v_0_0_1\Calcite-win32-x64\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Tiwa\Documents\work\electron\Calcite\builds\v_0_0_1\Calcite-win32-x64\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
-; NOTE: Don't use "Flags: ignoreversion" on any shared system files
+Source: "build\path\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "build\path\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 
 [Icons]
 Name: "{autoprograms}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
@@ -56,4 +48,3 @@ Name: "{autodesktop}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"; Tasks: de
 
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent
-
