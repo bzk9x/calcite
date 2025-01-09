@@ -11,6 +11,8 @@
     padding: 16px;
     border-right: 2px solid #303030;
     z-index: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .create-file {
@@ -39,3 +41,45 @@
     height: 20px;
 }
 
+.sidebar-button {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 8px 0 8px 0;
+}
+
+.sidebar-button:hover {
+    background-color: #3c3835;
+}
+
+.sidebar-button:active {
+    filter: blur(2px);
+}
+
+.sidebar-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar-button-container {
+    margin-top: 32px;
+}
+
+.settings-btn-ctn {
+    flex: 1;
+    height: 35vh;
+    display: flex;
+    align-items: end;
+}
+
+.settings-btn:hover {
+    transform: rotate(90deg);
+}
+
+.settings-btn:active {
+    transform: rotate(180deg);
+}

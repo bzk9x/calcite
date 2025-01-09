@@ -1,7 +1,8 @@
 .files {
     height: 90vh;
     padding: 16px;
-    width: fit-content;
+    display: flex;
+    flex-direction: column;
 }
 
 .file-explorer-text {
@@ -32,3 +33,53 @@
     color: #6e6458;
 }
 
+.file-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.file {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.file:hover {
+    background-color: #544f4b;
+}
+
+.file:active {
+    filter: blur(2px);
+}
+
+.file.selected-file {
+    background-color: #3c3835;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.file-explorer {
+    margin-top: 32px;
+    width: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: scroll;
+    height: inherit;
+    padding: 0 0 32px 0;
+}
+
+.file-explorer::-webkit-scrollbar-thumb {
+    opacity: 0;
+}
+
+.file-explorer-file-name {
+    width: 150px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 0 0 8px;
+}

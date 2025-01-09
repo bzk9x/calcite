@@ -1,0 +1,1 @@
+npx electron-packager . Calcite --platform=win32 --arch=x64 --out=builds/v_0_0_1 --overwrite --icon=app/assets/images/calcite.ico --asar

@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="../style/components/files.css">
   <link rel="stylesheet" href="../style/components/editor.css">
   <link rel="stylesheet" href="../style/components/create-file-popup.css">
+  <link rel="stylesheet" href="../style/themes/prisim-theme.css">
+
+  <script src="../libs/prism.js"></script>
   
 </head>
 <body id="body">
@@ -53,17 +56,120 @@
   <main>
     <div class="sidebar">
       <img src="../assets/images/icon.ico" alt="icon" class="app-icon">
-      <div class="create-file" id="create-file-btn">
+      <div class="create-file" id="create-file-btn" title="New file">
         <img src="../assets/images/ui/plus.png">
+      </div>
+      <div class="sidebar-button-container">
+        <div>
+          <div class="sidebar-button">
+            <img src="../assets/images/ui/chart.png" title="Visualize">
+          </div>
+          <div class="sidebar-button">
+            <img src="../assets/images/ui/convert.png" title="Convert">
+          </div>
+          <div class="sidebar-button">
+            <img src="../assets/images/ui/undo.png">
+          </div>
+          <div class="sidebar-button">
+            <img src="../assets/images/ui/redo.png">
+          </div>
+          <div class="sidebar-button">
+            <img src="../assets/images/ui/delete.png">
+          </div>
+      </div>
+      <div class="settings-btn-ctn">
+        <div class="sidebar-button settings-btn">
+          <img src="../assets/images/ui/settings.png">
+        </div>
+      </div>
       </div>
     </div>
     <div class="files">
       <div class="file-explorer-text">Files</div>
-      <input type="text" placeholder="Search" class="searchbar">
+      <input type="text" placeholder="Search" class="searchbar" id="searchbar" title="Search">
+
+      <div class="file-explorer">
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+        <div class="file">
+          <img src="../assets/images/ui/json.png" alt="" class="file-icon">
+          <span class="file-explorer-file-name">data.json</span>
+        </div>
+      </div>
     </div>
     <div class="editor">
       <div class="edit-area">
-
+        <textarea name="code-editor" id="code-editor" class="code-editor" spellcheck="false"></textarea>
       </div>
     </div>
     <div class="create-file-popup" id="create-file-popup">
@@ -84,7 +190,7 @@
         </div>
         <div class="create-file-popup-item">
           <label for="file-name">Data format:</label>
-          <select id="" class="data-format-select">
+          <select id="data-format-select" class="data-format-select">
             <option value="CSV">CSV</option>
             <option value="TSV">TSV</option>
             <option value="XLS/XLSX">XLS/XLSX</option>
@@ -120,5 +226,8 @@
   <script src="../js/nav.js"></script>
   <script src="../js/sidebar.js"></script>
   <script src="../js/create-file.js"></script>
+  <script src="../js/keybinds.js"></script>
+  <script src="../js/file-explorer.js"></script>
+  <script src="../js/editor.js"></script>
 </body>
 </html>

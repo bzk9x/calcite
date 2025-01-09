@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Roboto-regular';
+    src: url(../../assets/fonts/RobotoMono-Regular.ttf);
+}
+
 .editor {
     flex: 1;
     padding: 16px 16px 16px 0;
@@ -10,4 +15,23 @@
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
                 0 1px 3px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+.code-editor {
+    width: inherit;
+    height: inherit;
+    resize: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin: 16px;
+    color: #fff;
+    font-family: Roboto-regular;
+    line-height: 1.5;
+    tab-size: 4;
+    resize: vertical;
+    white-space: pre;
+    overflow-wrap: normal;
+    overflow-x: auto;
 }

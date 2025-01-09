@@ -1,6 +1,6 @@
 {
   "name": "Calcite",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^31.3.1"
+    "electron": "^31.3.1",
+    "electron-packager": "^17.1.2"
   }
 }

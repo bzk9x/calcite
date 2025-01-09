@@ -1,6 +1,8 @@
 document.getElementById('create-file-btn').addEventListener('click', function(event) {
     const menu = document.getElementById('create-file-popup');
     menu.classList.toggle('visible');
+    document.getElementById('create-file-popup-error-message').textContent = "";
+    document.getElementById('file-name').value = '';
 
     event.stopPropagation();
 });
